@@ -18,3 +18,33 @@ let d = 12             //  khi dung let bien d se khong khai tao truoc
 // immutable (kieu vung nho), mutable (khong quan tam vung nho)
 
 // 2. Kieu du lieu dynamic
+
+// true, false dinh nghia theo 6 truong hop
+// 6 truong hop la false : 0, null, undefined, "", false, NaN
+let e = 0
+if ("") {
+    console.log("TH true")
+} else {
+    console.log("TH false")
+}
+
+// undefined
+// TH1 : khai bao 1 bien ma khong co gia tri
+// TH2 : Goi thuoc tinh khong ton tai
+
+// 3 : Object
+const teo = {
+    name:"Nguyen van teo",
+    age: 10
+}
+console.log(teo['name'])
+console.log(teo.name)
+
+// 4 : Array
+const arrNumber = [10,11,12,5,2]
+console.log(arrNumber[0])
+
+// 5 : Toan tu
+// do uu tien 1 : ++ --
+// do uu tien 2 : * /
+// do uu tien 3 : + -
