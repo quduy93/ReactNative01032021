@@ -48,3 +48,33 @@ console.log(arrNumber[0])
 // do uu tien 1 : ++ --
 // do uu tien 2 : * /
 // do uu tien 3 : + -
+
+// 6 : Phuong thuc
+function showName(name) {
+    console.log(name)
+}
+//showName("Duy")
+console.log(showName)
+console.log(showName())
+console.log(showName("Duy"))
+
+// 7 : Object Method
+const teo1 = {
+    name:"Nguyen van teo",
+    age: 10,
+    showInfo : function() {
+        console.log(this.name)
+    }
+}
+console.log(teo1.showInfo())
+// this tham chieu toi cho tao ra function
+
+// 9 : vong loop
+const arrName = ["Teo","Ti", "Hoa", "Tuan"]
+for (const name of arrName) {
+    console.log(name)
+}
+
+for (const key in teo) {
+    console.log(key)
+}
