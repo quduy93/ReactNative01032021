@@ -95,3 +95,47 @@ const newArrNames = arrNames.filter(function(name) {
     }
 })
 console.log(newArrNames)
+
+const teo = {
+    name:"Nguyen van teo",
+    age: 10
+}
+delete teo.age
+console.log(teo)
+
+let listProducts = [
+    {
+        id:1,
+        cateId: 1,
+        name: "tivi"
+    },
+    {
+        id:1,
+        cateId: 1,
+        name: "tu lanh"
+    },
+    {
+        id:1,
+        cateId: 2,
+        name: "noi com dien"
+    },
+    {
+        id:1,
+        cateId: 3,
+        name: "chen"
+    }
+]
+
+function getProduct(cateId) {
+    const filtered = listProducts.filter(function(product) {
+        if (product.cateId === cateId) {
+            return true
+        }
+        return false
+    }).map(function(product) {
+        delete product.cateId
+        return product
+    })
+    console.log(filtered)
+}
+getProduct(3, listProducts)
