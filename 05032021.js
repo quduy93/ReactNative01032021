@@ -83,3 +83,15 @@ const newArrNums2 = arrNums.myMap(function(number) {
     return number*2
 })
 console.log(newArrNums2)
+
+// 16. filter
+//1. Thay doi kich thuoc, khong thay doi gia tri
+//2. Khong gan su thay doi vao mang old, gan su thay doi vao mang new
+
+const arrNames = ["hao", "tuan", "loan", "hau"]
+const newArrNames = arrNames.filter(function(name) {
+    if (name.length == 3) {
+        return true
+    }
+})
+console.log(newArrNames)
