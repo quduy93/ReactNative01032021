@@ -23,3 +23,18 @@ console.log(arrNum)
 // xoa nguoc
 arrNum.splice(-2,1)
 console.log(arrNum)
+
+// 14. Callback (Higher order function) method nhan gia tri la method su dung funciton programming
+function tinhTong(arr, fn) {
+    let result = 0
+    for (const value of arr) {
+        result += value
+    }
+    fn(result)
+}
+// cach 1
+tinhTong([1,2,3,4,5], console.log)
+// cach 2 Tu dinh nghia
+tinhTong([1,2,3,4,5], function(result) {
+    console.log(result)
+})
