@@ -75,6 +75,45 @@ for (const name of arrName) {
     console.log(name)
 }
 
-for (const key in teo) {
-    console.log(key)
+function multiply(arr) {
+    let result = 1
+    for (const value of arr) {
+        result *= value
+    }
+    return result;
 }
+console.log(multiply([2,3,4]))
+
+const apartment = {
+    bedroom: {
+        area: 20,
+        bed: {
+            type:'twin bed',
+            price: 10
+        }
+    }
+}
+
+//function getKey(obj) {
+//    for (const key in obj) {
+//        console.log(key)
+//        for (const keyBedRoom in obj[key]) {
+//            console.log(keyBedRoom)
+//            for (const keyBed in obj[key][keyBedRoom]) {
+//                console.log(keyBed)
+//            }
+//        }
+//    }
+//}
+
+function getKey(obj) {
+    for (const key in obj) {
+        console.log(key)
+        if (typeof obj[key] === "object") {
+            getKey(obj[key])
+        }
+    }
+}
+getKey(apartment)
+
+
