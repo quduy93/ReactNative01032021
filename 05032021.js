@@ -139,3 +139,18 @@ function getProduct(cateId) {
     console.log(filtered)
 }
 getProduct(3, listProducts)
+
+//17. Ham reduce
+const arrNums1 = [1,2,3,4,5,6,6]
+//1. Thuc hien tinh toan de tra ve ket qua theo yeu cau
+//2. Khong anh huong den old array
+
+const newArrNums1 = arrNums1.reduce(function(accumulator, currentValue) {
+    // loop 1
+    // accumulator = init
+    // current = 1 ( phan tu dau tien trong mang )
+    // loop2 
+    // accumulator = ket qua maf loop 1 tra ve
+    return accumulator + currentValue
+}, 0) // output is array, or is number
+console.log(newArrNums1)
