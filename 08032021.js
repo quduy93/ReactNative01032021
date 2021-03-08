@@ -51,4 +51,37 @@ const mouse = {
 
 run(mouse.run.bind(mouse))
 
+// 21 : A row function Lambda expression -> chuc nang xu ly
+const arr1 = [1,2,3]
+const newArr1 = arr1.map((num) => {
+    return num*2
+})
+console.log(arr1, newArr1)
+
+const teo4 = {
+    name:"Teo",
+    age: 10,
+    showName:function() {
+        let that = this
+        let fn = function() {
+            console.log(that.name)
+        }
+        fn()
+    }
+}
+
+const teo5 = {
+    name:"Teo",
+    age: 10,
+    showName:function() {        
+        let fn = () => {
+            let fn2 = () => {
+                console.log(this.name)
+            }     
+            fn2()       
+        }
+        fn()
+    }
+}
+teo5.showName()
 
