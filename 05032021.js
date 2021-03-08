@@ -154,3 +154,43 @@ const newArrNums1 = arrNums1.reduce(function(accumulator, currentValue) {
     return accumulator + currentValue
 }, 0) // output is array, or is number
 console.log(newArrNums1)
+
+
+const voters = [
+    {name:'Bob' , age: 30, voted: true},
+    {name:'Jake' , age: 32, voted: true},
+    {name:'Kate' , age: 25, voted: false},
+    {name:'Sam' , age: 20, voted: false},
+    {name:'Phil' , age: 21, voted: true},
+    {name:'Ed' , age:55, voted:true},
+    {name:'Tami' , age: 54, voted:true},
+    {name: 'Mary', age: 31, voted: false},
+    {name: 'Becky', age: 43, voted: false},
+    {name: 'Joey', age: 41, voted: true},
+    {name: 'Jeff', age: 30, voted: true},
+    {name: 'Zack', age: 19, voted: false}
+  ]
+
+function totalVoters(arr1) {
+    const total = arr1.reduce(function(accumulator , voter) {
+        if (voter.voted) {
+            accumulator += 1
+        }
+        return accumulator
+    }, 0)
+    console.log(total)
+}
+totalVoters(voters)
+
+// Bai tap kiem tra gia tri trung : 
+const words = ["a","b","c","a","b","a","a","c"]
+const object = words.reduce(function(accumulator, word) {
+    if (word in accumulator) {
+        accumulator[word] += 1
+    } else {
+        accumulator[word] = 1
+    }
+    return accumulator
+}, {})
+console.log(object)
+  
