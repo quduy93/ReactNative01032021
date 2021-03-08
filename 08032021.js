@@ -85,3 +85,8 @@ const teo5 = {
 }
 teo5.showName()
 
+// 22. Template string
+let name = "teo"
+const str = `Hello . ${name}`
+console.log(str)
+
